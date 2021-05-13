@@ -1,0 +1,53 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computador",
+      "price": 3400,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/2933/2933296.svg?token=exp=1620939269~hmac=d88125ca16b3aefd7ed81dc55c2d1978"
+    },
+    {
+      "id": 2,
+      "name": "Joystick",
+      "price": 499,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/4711/4711847.svg?token=exp=1620939292~hmac=399ef475da63c91674405e2c29b2299b"
+    },
+    {
+      "id": 3,
+      "name": "Câmera Fotográfica",
+      "price": 1700,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/4712/4712918.svg?token=exp=1620939288~hmac=d0f06001e45cd41b211508d6a59f0697"
+    },
+    {
+      "id": 4,
+      "name": "Microfone",
+      "price": 500,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/2933/2933306.svg?token=exp=1620939491~hmac=dc0b2011e5db458b6b9aafa303175037"
+    },
+    {
+      "id": 5,
+      "name": "Teclado",
+      "price": 250,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/2824/2824587.svg?token=exp=1620939585~hmac=cb12b8934ecb40bdfd76beb17822687f"
+    },
+    {
+      "id": 6,
+      "name": "Headphone",
+      "price": 279,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/3452/3452003.svg?token=exp=1620939637~hmac=c3fd61c46b34413417849664be9176f4"
+    },
+    {
+      "id": 7,
+      "name": "Smartphone",
+      "price": 1499,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/186/186239.svg?token=exp=1620940268~hmac=b071a9ef8d3ba1f1c15a55d5648556ae"
+    },
+    {
+      "id": 8,
+      "name": "Mouse",
+      "price": 200,
+      "image": "https://www.flaticon.com/svg/vstatic/svg/4508/4508105.svg?token=exp=1620940453~hmac=9a2f3ae8e758fb91db61feafddce8cd7"
+    }
+  ]
+}
+
