@@ -29,10 +29,6 @@ const GlobalStyle = createGlobalStyle`
       min-height: 100vh;
       text-rendering: optimizeSpeed;
       line-height: 1.5;
-      background: ${theme.colors.primary};
-      display: flex;
-      justify-content: center;
-      align-items: center;
   `}
   }
 
