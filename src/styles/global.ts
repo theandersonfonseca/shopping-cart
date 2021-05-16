@@ -48,6 +48,10 @@ const GlobalStyle = createGlobalStyle`
   select {
     font: inherit;
   }
+
+  span {
+    display: inline-block;
+  }
 `;
 
 export default GlobalStyle;
