@@ -2,52 +2,61 @@
   "products": [
     {
       "id": 1,
-      "name": "Computador",
-      "price": 3400,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/2933/2933296.svg?token=exp=1620939269~hmac=d88125ca16b3aefd7ed81dc55c2d1978"
+      "name": "Notebook",
+      "price": 6000,
+      "image": "https://img-premium.flaticon.com/png/512/689/689355.png?token=exp=1621299920~hmac=91ddde9ee5cab48c16c176916a326e30",
+      "inCart": false
     },
     {
       "id": 2,
       "name": "Joystick",
       "price": 499,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/4711/4711847.svg?token=exp=1620939292~hmac=399ef475da63c91674405e2c29b2299b"
+      "image": "https://img-premium.flaticon.com/png/512/2991/2991606.png?token=exp=1621299922~hmac=b492fa4fadbddcc8849cc034d7ef0ead",
+      "inCart": false
     },
     {
       "id": 3,
       "name": "Câmera Fotográfica",
       "price": 1700,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/4712/4712918.svg?token=exp=1620939288~hmac=d0f06001e45cd41b211508d6a59f0697"
+      "image": "https://img-premium.flaticon.com/png/512/3617/3617277.png?token=exp=1621299930~hmac=526606bf29c4d15a4c2079416bae3e3f",
+      "inCart": false
     },
     {
       "id": 4,
       "name": "Microfone",
       "price": 500,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/2933/2933306.svg?token=exp=1620939491~hmac=dc0b2011e5db458b6b9aafa303175037"
+      "image": "https://img-premium.flaticon.com/png/512/3163/3163485.png?token=exp=1621299935~hmac=95a142887f8f1286beaeaaa8da8cd60a",
+      "inCart": false
     },
     {
       "id": 5,
       "name": "Teclado",
       "price": 250,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/2824/2824587.svg?token=exp=1620939585~hmac=cb12b8934ecb40bdfd76beb17822687f"
+      "image": "https://img-premium.flaticon.com/png/512/2867/2867522.png?token=exp=1621299941~hmac=f4bb0327db27e8af4743a26c5bfb6013",
+      "inCart": false
     },
     {
       "id": 6,
       "name": "Headphone",
       "price": 279,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/3452/3452003.svg?token=exp=1620939637~hmac=c3fd61c46b34413417849664be9176f4"
+      "image": "https://img-premium.flaticon.com/png/512/3655/3655252.png?token=exp=1621299946~hmac=d54a3bd275ac47ae42134432f4e2fa95",
+      "inCart": false
     },
     {
       "id": 7,
       "name": "Smartphone",
       "price": 1499,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/186/186239.svg?token=exp=1620940268~hmac=b071a9ef8d3ba1f1c15a55d5648556ae"
+      "image": "https://img-premium.flaticon.com/png/512/186/186239.png?token=exp=1621299949~hmac=e236d07bb53b85e45b6df39f0c38e768",
+      "inCart": false
     },
     {
       "id": 8,
       "name": "Mouse",
       "price": 200,
-      "image": "https://www.flaticon.com/svg/vstatic/svg/4508/4508105.svg?token=exp=1620940453~hmac=9a2f3ae8e758fb91db61feafddce8cd7"
+      "image": "https://img-premium.flaticon.com/png/512/900/900289.png?token=exp=1621299952~hmac=677e454542e907b74a4c37f5862f0443",
+      "inCart": false
     }
   ]
 }
+
 
