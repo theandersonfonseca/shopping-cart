@@ -12,7 +12,6 @@ export type ProductProps = {
   image: string
   name: string
   price: number 
-  inCart: boolean
 }
 
 const Product = ({image, name, price}: ProductProps) => {

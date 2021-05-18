@@ -24,7 +24,6 @@ const Products = () => {
               image={product.image} 
               name={product.name} 
               price={product.price}
-              inCart={product.inCart}
             />
           ))}
         </S.Content>
