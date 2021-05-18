@@ -1,4 +1,4 @@
-import { useContext} from 'react'
+import { useContext } from 'react'
 
 import * as S from './styles'
 
@@ -9,7 +9,7 @@ import { Context } from '../../state/context'
 import { ProductType } from '../../state/types'
 
 const Products = () => {
-  const {state} = useContext(Context)
+  const { state } = useContext(Context)
 
   return (
     <Container>
@@ -18,11 +18,11 @@ const Products = () => {
 
         <S.Content>
           {state.products.map((product: ProductType) => (
-            <Product  
-              key={product.id} 
-              id={product.id} 
-              image={product.image} 
-              name={product.name} 
+            <Product
+              key={product.id}
+              id={product.id}
+              image={product.image}
+              name={product.name}
               price={product.price}
             />
           ))}

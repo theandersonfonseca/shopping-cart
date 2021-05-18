@@ -8,26 +8,29 @@ import { Actions } from '../../state/types'
 import convertToMoney from '../../utils/convertToMoney'
 
 export type ProductProps = {
-  id: number;
+  id: number
   image: string
   name: string
-  price: number 
+  price: number
 }
 
-const Product = ({image, name, price}: ProductProps) => {
-  const {state, dispatch} = useContext(Context)
+const Product = ({ image, name, price }: ProductProps) => {
+  const { state, dispatch } = useContext(Context)
   const [isInCart, setIsInCart] = useState(false)
 
   const addProductInCart = () => {
-    dispatch({type: Actions.addProductInCart, payload: {name, image, price}})
+    dispatch({
+      type: Actions.addProductInCart,
+      payload: { name, image, price }
+    })
   }
 
   const removeProductFromCart = () => {
-    dispatch({type: Actions.removeProductFromCart, payload: name})
+    dispatch({ type: Actions.removeProductFromCart, payload: name })
   }
 
   useEffect(() => {
-    if (state.cart.some(product => product.name === name)) {
+    if (state.cart.some((product) => product.name === name)) {
       setIsInCart(true)
       return
     }
@@ -36,20 +39,21 @@ const Product = ({image, name, price}: ProductProps) => {
   }, [name, state.cart])
 
   return (
-    <S.Wrapper >
-      <S.Image src={image}/>
+    <S.Wrapper>
+      <S.Image src={image} />
 
       <S.Name>{name}</S.Name>
 
       <S.Content>
         <S.Price>{convertToMoney(price)}</S.Price>
-        {isInCart ? 
-          <S.IconCartRemove onClick={removeProductFromCart}/> : 
-          <S.IconCartAdd onClick={addProductInCart}/>
-        }
+        {isInCart ? (
+          <S.IconCartRemove onClick={removeProductFromCart} />
+        ) : (
+          <S.IconCartAdd onClick={addProductInCart} />
+        )}
       </S.Content>
     </S.Wrapper>
   )
-}   
+}
 
 export default Product

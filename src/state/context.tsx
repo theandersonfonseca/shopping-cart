@@ -1,26 +1,30 @@
-import React, {createContext, useReducer, useEffect, useState} from 'react'
+import React, { createContext, useReducer, useEffect, useState } from 'react'
 
 import { reducer } from './reducer'
 import { ContextProviderType, ProductType, StateType } from './types'
 
-const localStorageData = JSON.parse(localStorage.getItem('cart') ||' {}')
+const localStorageData = JSON.parse(localStorage.getItem('cart') || ' {}')
 
 const initialState = {
   products: [],
-  cart: Object.keys(localStorageData).length === 0 && localStorageData.constructor === Object ? [] : localStorageData,
-} 
+  cart:
+    Object.keys(localStorageData).length === 0 &&
+    localStorageData.constructor === Object
+      ? []
+      : localStorageData
+}
 
 export const Context = createContext<{
-  state: StateType,
+  state: StateType
   dispatch: React.Dispatch<any>
 }>({
   state: initialState,
   dispatch: () => null
-});
+})
 
 const API = 'http://localhost:3000/products'
 
-export const ContextProvider = ({children}: ContextProviderType) => {
+export const ContextProvider = ({ children }: ContextProviderType) => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const [products, setProducts] = useState<ProductType[]>([])
 
@@ -32,7 +36,7 @@ export const ContextProvider = ({children}: ContextProviderType) => {
 
         state.products = responseData
         setProducts(responseData)
-      } catch(error) {
+      } catch (error) {
         console.log(error)
       }
     }
@@ -40,11 +44,9 @@ export const ContextProvider = ({children}: ContextProviderType) => {
     localStorage.setItem('cart', JSON.stringify(state.cart))
 
     getProducts()
-  },[state])
+  }, [state])
 
   return (
-    <Context.Provider value={{state, dispatch}}>
-      {children}
-    </Context.Provider>
+    <Context.Provider value={{ state, dispatch }}>{children}</Context.Provider>
   )
 }

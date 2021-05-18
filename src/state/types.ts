@@ -1,19 +1,19 @@
 export type StateType = {
-  products: ProductType[],
-  cart: ProductCartType[],
+  products: ProductType[]
+  cart: ProductCartType[]
 }
 
 export type ProductType = {
   id: number
   image: string
   name: string
-  price: number 
+  price: number
 }
 
 export type ProductCartType = {
   image: string
   name: string
-  price: number 
+  price: number
   quantity: number
 }
 
@@ -29,9 +29,12 @@ export enum Actions {
   cleanCart = 'CLEAN_CART'
 }
 
-export type ActionsType = 
-  | {type: Actions.addProductInCart; payload: {name: string, price: number, image: string}}
-  | {type: Actions.removeProductFromCart; payload: string}
-  | {type: Actions.increaseProductQuantity; payload: string}
-  | {type: Actions.decreaseProductQuantity; payload: string}
-  | {type: Actions.cleanCart};
+export type ActionsType =
+  | {
+      type: Actions.addProductInCart
+      payload: { name: string; price: number; image: string }
+    }
+  | { type: Actions.removeProductFromCart; payload: string }
+  | { type: Actions.increaseProductQuantity; payload: string }
+  | { type: Actions.decreaseProductQuantity; payload: string }
+  | { type: Actions.cleanCart }

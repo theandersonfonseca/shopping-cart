@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import * as S from './styles'
 
@@ -8,8 +8,8 @@ import Container from '../Container'
 import Cart from '../Cart'
 
 const Header = () => {
-  const [cartIsOpen, setCartIsOpen] = useState(false) 
-  const {state} = useContext(Context)
+  const [cartIsOpen, setCartIsOpen] = useState(false)
+  const { state } = useContext(Context)
 
   return (
     <S.Wrapper>
@@ -17,14 +17,14 @@ const Header = () => {
         <S.Content>
           <S.Title>Loja Tudo Barato</S.Title>
 
-          <S.CartIconWrapper>   
-            <S.CartIcon onClick={() => setCartIsOpen(!cartIsOpen)}/>
+          <S.CartIconWrapper>
+            <S.CartIcon onClick={() => setCartIsOpen(!cartIsOpen)} />
             <S.Badge>{state.cart.length}</S.Badge>
           </S.CartIconWrapper>
         </S.Content>
       </Container>
 
-      {cartIsOpen && <Cart setCartIsOpen={setCartIsOpen}/>}
+      {cartIsOpen && <Cart setCartIsOpen={setCartIsOpen} />}
     </S.Wrapper>
   )
 }

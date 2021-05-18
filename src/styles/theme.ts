@@ -1,11 +1,11 @@
 export default {
-  colors: {    
+  colors: {
     primary: '#3CD3C1',
     secondary: '#D958A6',
     white: '#FAFAFA',
     dark: '#333',
     gray: '#928d8d',
-    grayLight: '#eee',
+    grayLight: '#eee'
   },
 
   font: {
@@ -21,7 +21,7 @@ export default {
       xlarge: '2.0rem',
       xxlarge: '2.8rem',
       huge: '4rem'
-    },
+    }
   },
 
   spacings: {
@@ -50,8 +50,6 @@ export default {
 
   border: {
     radius: '0.4rem',
-    circle: '50%',
-  },
+    circle: '50%'
+  }
 } as const
-
-

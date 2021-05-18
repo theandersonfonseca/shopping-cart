@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import * as S from './styles'
 
-import {Context} from '../../state/context'
+import { Context } from '../../state/context'
 import { Actions } from '../../state/types'
 
 import ProductCart from '../ProductCart'
@@ -13,16 +13,16 @@ type CartProps = {
   setCartIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const Cart = ({setCartIsOpen}: CartProps) => {
-  const {state, dispatch} = useContext(Context)
+const Cart = ({ setCartIsOpen }: CartProps) => {
+  const { state, dispatch } = useContext(Context)
 
   const handleCloseCart = () => {
-    setCartIsOpen((cartIsOpen) => !cartIsOpen )
+    setCartIsOpen((cartIsOpen) => !cartIsOpen)
   }
 
   const calculatePurchaseAmount = () => {
     const purchaseAmount = state.cart.reduce((acc, product) => {
-      return acc + (product.price * product.quantity)
+      return acc + product.price * product.quantity
     }, 0)
 
     return convertToMoney(purchaseAmount)
@@ -36,11 +36,11 @@ const Cart = ({setCartIsOpen}: CartProps) => {
 
     window.alert(`Compra confirmada, valor total ${calculatePurchaseAmount()}`)
 
-    dispatch({type: Actions.cleanCart})
-  }   
+    dispatch({ type: Actions.cleanCart })
+  }
 
   const cleanCart = () => {
-    dispatch({type: Actions.cleanCart})
+    dispatch({ type: Actions.cleanCart })
   }
 
   return (
@@ -48,15 +48,20 @@ const Cart = ({setCartIsOpen}: CartProps) => {
       <S.CloseCart onClick={handleCloseCart}>X</S.CloseCart>
 
       <S.Title>Seu Carrinho</S.Title>
-      
-      {state.cart.length > 0 ? state.cart.map(product => 
-        <ProductCart 
-          key={product.name} 
-          name={product.name} 
-          image={product.image}   
-          price={product.price} 
-          quantity={product.quantity}/>) : 
-        <S.EmptyCart>Nenhum produto no carrinho...</S.EmptyCart>}
+
+      {state.cart.length > 0 ? (
+        state.cart.map((product) => (
+          <ProductCart
+            key={product.name}
+            name={product.name}
+            image={product.image}
+            price={product.price}
+            quantity={product.quantity}
+          />
+        ))
+      ) : (
+        <S.EmptyCart>Nenhum produto no carrinho...</S.EmptyCart>
+      )}
 
       <S.TotalPrice>Valor Total - {calculatePurchaseAmount()}</S.TotalPrice>
 

@@ -1,8 +1,8 @@
-import styled, {css} from 'styled-components'
-import {Cart} from '@styled-icons/bootstrap'
+import styled, { css } from 'styled-components'
+import { Cart } from '@styled-icons/bootstrap'
 
 export const Wrapper = styled.header`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     height: 10rem;
     background: ${theme.colors.secondary};
     color: ${theme.colors.white};
@@ -11,14 +11,14 @@ export const Wrapper = styled.header`
 
 export const Content = styled.div`
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
   height: 100%;
 `
 
 export const Title = styled.h1`
-  ${({theme}) => css`
-    font-size: ${theme.font.sizes.xxlarge};     
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xxlarge};
     text-transform: uppercase;
     color: ${theme.colors.white};
   `}
@@ -29,12 +29,12 @@ export const CartIconWrapper = styled.div`
 `
 
 export const CartIcon = styled(Cart)`
-  width: 2.5rem  ;
+  width: 2.5rem;
   cursor: pointer;
 `
 
 export const Badge = styled.span`
-  ${({theme}) => css`
+  ${({ theme }) => css`
     display: flex;
     justify-content: center;
     align-items: center;
